@@ -5,7 +5,7 @@ class_name Player
 signal healthChanged
 
 
-
+var coins = 0
 
 var speed = 300
 var player_state
@@ -63,3 +63,6 @@ func play_anim(dir): #player movement with animations # and get current health t
 
 func player():
 	pass
+
+func GetCoin():
+	coins += 1
