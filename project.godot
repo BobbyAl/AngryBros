@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="AngryBros"
+run/main_scene="res://scene/world.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+global="*res://script/global.gd"
 
 [input]
 
