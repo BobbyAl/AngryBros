@@ -1,0 +1,226 @@
+[gd_scene load_steps=19 format=3 uid="uid://da44cdqxrk0gt"]
+
+[ext_resource type="Script" path="res://shopmenu.gd" id="1_c5wye"]
+[ext_resource type="Texture2D" uid="uid://calkyxil5hqd8" path="res://Sunny-land-files/Graphical Assets/GIF Previews/player/farmingTilesheetComplete.png" id="1_qa7fl"]
+[ext_resource type="Texture2D" uid="uid://b3kujh702txwa" path="res://Sunny-land-files/greenarrow.png" id="2_2r550"]
+[ext_resource type="FontFile" uid="uid://buea3m86cinv" path="res://Fonts/Kenney Mini Square.ttf" id="2_n0uoa"]
+[ext_resource type="FontFile" uid="uid://ctvxefp6c4tuo" path="res://Fonts/Kenney Future Narrow.ttf" id="3_6ps20"]
+[ext_resource type="Texture2D" uid="uid://d3r2x6djwv0gu" path="res://Sunny-land-files/angrybro.png" id="3_xhmnf"]
+[ext_resource type="Texture2D" uid="uid://x0un1acbpr56" path="res://Sunny-land-files/creatine.png" id="4_6b6cm"]
+[ext_resource type="Texture2D" uid="uid://d11j6u8ba4tpn" path="res://chicken.png" id="5_cjk0b"]
+[ext_resource type="Texture2D" uid="uid://dywgqrjte3dx0" path="res://Sunny-land-files/protein.png" id="5_rlcg1"]
+[ext_resource type="Texture2D" uid="uid://2bjlxn5eocao" path="res://Fonts/angrybrodrink.png" id="6_syurg"]
+[ext_resource type="PackedScene" uid="uid://e3gs25goayoq" path="res://payment.tscn" id="8_6jtm5"]
+[ext_resource type="Texture2D" uid="uid://ojndmilkpjpo" path="res://tren.png" id="8_b210a"]
+[ext_resource type="FontFile" uid="uid://cucgtksnhb6p6" path="res://Fonts/Kenney Future.ttf" id="13_6hyet"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ewa4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2r550")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cf6eu"]
+atlas = ExtResource("3_xhmnf")
+region = Rect2(0, 134, 52, 67)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_irap5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cf6eu")
+}],
+"loop": true,
+"name": &"AngryBrosuit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_syurg")
+}],
+"loop": true,
+"name": &"angrybull",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_cjk0b")
+}],
+"loop": true,
+"name": &"chicken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_6b6cm")
+}],
+"loop": true,
+"name": &"creatin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rlcg1")
+}],
+"loop": true,
+"name": &"protein",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_b210a")
+}],
+"loop": true,
+"name": &"tren",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xiqso"]
+atlas = ExtResource("1_qa7fl")
+region = Rect2(64, 80, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h22rp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xiqso")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="shopmenu" type="StaticBody2D"]
+script = ExtResource("1_c5wye")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_top = 320.0
+offset_right = 368.0
+offset_bottom = 584.0
+size_flags_stretch_ratio = 0.0
+color = Color(0.27451, 0.184314, 0.176471, 0.176471)
+
+[node name="TabContainer" type="TabContainer" parent="."]
+modulate = Color(0.1743, 0.786287, 0.83, 1)
+offset_top = 256.0
+offset_right = 496.0
+offset_bottom = 796.0
+scale = Vector2(1.01703, 0.603324)
+theme_override_fonts/font = ExtResource("2_n0uoa")
+theme_override_font_sizes/font_size = 28
+
+[node name="Welcome to the Gym Store" type="RichTextLabel" parent="TabContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(52.65, 85, 0.95, 1)
+theme_override_fonts/normal_font = ExtResource("3_6ps20")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 1
+tab_size = 18
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+modulate = Color(1, 0, 0, 1)
+anchors_preset = -1
+anchor_right = 0.231
+anchor_bottom = 0.375
+offset_left = 256.0
+offset_top = 512.0
+offset_right = 360.0
+offset_bottom = 576.0
+
+[node name="rightbutton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.0705882)
+offset_left = 192.0
+offset_top = 536.0
+offset_right = 224.0
+offset_bottom = 560.0
+
+[node name="leftbutton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.054902)
+offset_left = 32.0
+offset_top = 528.0
+offset_right = 74.0
+offset_bottom = 561.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(104, 516)
+rotation = 6.28319
+scale = Vector2(2.594, 2.868)
+sprite_frames = SubResource("SpriteFrames_ewa4m")
+
+[node name="righticon" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(152, 576)
+rotation = 3.14159
+scale = Vector2(2.5941, 2.86826)
+sprite_frames = SubResource("SpriteFrames_ewa4m")
+
+[node name="icon" type="AnimatedSprite2D" parent="."]
+position = Vector2(132.154, 459.133)
+scale = Vector2(2, 1.952)
+sprite_frames = SubResource("SpriteFrames_irap5")
+animation = &"protein"
+
+[node name="pricelabel" type="RichTextLabel" parent="."]
+offset_left = 200.0
+offset_top = 456.0
+offset_right = 248.0
+offset_bottom = 488.0
+theme_override_fonts/normal_font = ExtResource("3_6ps20")
+text = "100"
+
+[node name="coinicon" type="AnimatedSprite2D" parent="."]
+position = Vector2(264, 472)
+scale = Vector2(2.68819, 2.60714)
+sprite_frames = SubResource("SpriteFrames_h22rp")
+
+[node name="buybutton" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 512.0
+offset_right = 360.0
+offset_bottom = 576.0
+tooltip_text = "\"One item per purchase\""
+theme_override_fonts/font = ExtResource("3_6ps20")
+text = "BUY"
+
+[node name="Payment" parent="." instance=ExtResource("8_6jtm5")]
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+modulate = Color(0.172549, 0.00392157, 0.00784314, 0.772549)
+offset_left = 296.0
+offset_top = 368.0
+offset_right = 496.0
+offset_bottom = 496.0
+
+[node name="remaining_coins_label" type="RichTextLabel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 304.0
+offset_top = 448.0
+offset_right = 464.0
+offset_bottom = 496.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("13_6hyet")
+
+[node name="remaining_coins_label2" type="RichTextLabel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 296.0
+offset_top = 376.0
+offset_right = 456.0
+offset_bottom = 432.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_6ps20")
+
+[connection signal="pressed" from="rightbutton" to="." method="_on_rightbutton_pressed"]
+[connection signal="pressed" from="leftbutton" to="." method="_on_leftbutton_pressed"]
+[connection signal="pressed" from="buybutton" to="." method="_on_buybutton_pressed"]
