@@ -63,3 +63,6 @@ func play_anim(dir): #player movement with animations # and get current health t
 
 func player():
 	pass
+
+func player_shop_method():
+	pass

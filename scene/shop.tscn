@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce2ylthobh6ck"]
+
+[ext_resource type="Script" path="res://script/shop.gd" id="1_bbo7n"]
+[ext_resource type="PackedScene" uid="uid://4cgwrovqrhh0" path="res://scene/shopmenu.tscn" id="2_wel2s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k5smu"]
+radius = 360.688
+
+[node name="shop" type="StaticBody2D"]
+position = Vector2(272, 72)
+script = ExtResource("1_bbo7n")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(64, 136)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(188, 386)
+scale = Vector2(0.287806, -0.159965)
+shape = SubResource("CircleShape2D_k5smu")
+
+[node name="shopmenu" parent="." instance=ExtResource("2_wel2s")]
+position = Vector2(0, 248)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
