@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://prg5eor6tdhi"]
 
-[ext_resource type="Script" path="res://CSE3310/Fall 2023/Team #11/User/login_menu.gd" id="1_f4cvb"]
+[ext_resource type="Script" path="res://script/login_menu.gd" id="1_f4cvb"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_f4cvb")
