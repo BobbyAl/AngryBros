@@ -1,48 +1,55 @@
-[gd_scene load_steps=2 format=3 uid="uid://prg5eor6tdhi"]
+[gd_scene load_steps=3 format=3 uid="uid://prg5eor6tdhi"]
 
 [ext_resource type="Script" path="res://script/login_menu.gd" id="1_f4cvb"]
+[ext_resource type="Texture2D" uid="uid://bmnrjr7cm3rue" path="res://art/background/AngryBrosLoadingScreen.png" id="2_m8sp8"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_f4cvb")
 
+[node name="AngryBrosLoadingScreen" type="Sprite2D" parent="."]
+position = Vector2(483, 270)
+texture = ExtResource("2_m8sp8")
+
 [node name="Username" type="TextEdit" parent="."]
 modulate = Color(100, 1, 1, 1)
 custom_minimum_size = Vector2(100, 40)
-offset_left = 463.0
-offset_top = 231.0
-offset_right = 678.0
-offset_bottom = 271.0
+offset_left = 335.0
+offset_top = 238.0
+offset_right = 604.0
+offset_bottom = 282.0
 size_flags_vertical = 0
+theme_override_colors/background_color = Color(1, 1, 1, 0.0392157)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
 placeholder_text = "Username"
 
 [node name="Password" type="TextEdit" parent="."]
 modulate = Color(100, 1, 1, 1)
 custom_minimum_size = Vector2(100, 40)
-offset_left = 464.0
-offset_top = 285.0
-offset_right = 679.0
-offset_bottom = 325.0
+offset_left = 335.0
+offset_top = 296.0
+offset_right = 604.0
+offset_bottom = 340.0
+theme_override_colors/background_color = Color(1, 1, 1, 0.0392157)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
 placeholder_text = "Password"
 
 [node name="Create" type="Button" parent="."]
 modulate = Color(0, 0, 0, 1)
-offset_left = 533.0
-offset_top = 367.0
-offset_right = 608.0
-offset_bottom = 407.0
+offset_left = 446.0
+offset_top = 369.0
+offset_right = 521.0
+offset_bottom = 409.0
 theme_override_colors/font_color = Color(0.972549, 0.972549, 0.972549, 1)
 theme_override_colors/font_pressed_color = Color(100, 0, 0, 1)
 text = "Create"
 
 [node name="CreateD" type="Button" parent="."]
-offset_left = 532.0
-offset_top = 368.0
-offset_right = 607.0
-offset_bottom = 408.0
+offset_left = 341.0
+offset_top = 367.0
+offset_right = 416.0
+offset_bottom = 407.0
 theme_override_colors/font_color = Color(0.972549, 0.972549, 0.972549, 1)
 theme_override_colors/font_pressed_color = Color(100, 0, 0, 1)
 text = "Create"
