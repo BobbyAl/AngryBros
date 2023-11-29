@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bu0jeqflo3cu4"
+path="res://.godot/imported/Kenney High Square.ttf-53c458a1df2f5e3a2299efbaf1ee8451.fontdata"
+
+[deps]
+
+source_file="res://art/Fonts/Kenney High Square.ttf"
+dest_files=["res://.godot/imported/Kenney High Square.ttf-53c458a1df2f5e3a2299efbaf1ee8451.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

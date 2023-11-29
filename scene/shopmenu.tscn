@@ -1,0 +1,229 @@
+[gd_scene load_steps=17 format=3 uid="uid://4cgwrovqrhh0"]
+
+[ext_resource type="Script" path="res://script/shopmenu.gd" id="1_viqwj"]
+[ext_resource type="FontFile" uid="uid://buea3m86cinv" path="res://art/Fonts/Kenney Mini Square.ttf" id="2_5fakd"]
+[ext_resource type="Texture2D" uid="uid://bkb3vld87rnjw" path="res://art/assets/greenarrow.png" id="2_sh45q"]
+[ext_resource type="Texture2D" uid="uid://ckyggx02awepk" path="res://art/assets/farmingTilesheetComplete.png" id="3_fno1m"]
+[ext_resource type="Texture2D" uid="uid://p42eqwhehde7" path="res://art/assets/angrybro.png" id="4_rih5w"]
+[ext_resource type="Texture2D" uid="uid://cnrbvkvnc36rg" path="res://art/assets/angrybrodrink.png" id="5_3kocn"]
+[ext_resource type="Texture2D" uid="uid://csvnrg8hxcahh" path="res://art/assets/chicken.png" id="6_yvq3w"]
+[ext_resource type="Texture2D" uid="uid://cofx3aeu057ko" path="res://art/assets/creatine.png" id="7_x8f0u"]
+[ext_resource type="Texture2D" uid="uid://cjci12bpk04jy" path="res://art/assets/protein.png" id="8_18ofu"]
+[ext_resource type="Texture2D" uid="uid://ctqpl2tsmywht" path="res://art/assets/tren.png" id="9_4wbns"]
+[ext_resource type="FontFile" uid="uid://ctvxefp6c4tuo" path="res://art/Fonts/Kenney Future Narrow.ttf" id="11_dir66"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2jjai"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sh45q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asdvb"]
+atlas = ExtResource("4_rih5w")
+region = Rect2(0, 134, 64, 67)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mcd0g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_asdvb")
+}],
+"loop": true,
+"name": &"AngryBrosuit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_3kocn")
+}],
+"loop": true,
+"name": &"angrybull",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_yvq3w")
+}],
+"loop": true,
+"name": &"chicken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_x8f0u")
+}],
+"loop": true,
+"name": &"creatin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_18ofu")
+}],
+"loop": true,
+"name": &"protein",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_4wbns")
+}],
+"loop": true,
+"name": &"tren",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uldpu"]
+atlas = ExtResource("3_fno1m")
+region = Rect2(64, 80, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l60io"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uldpu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="shopmenu" type="StaticBody2D"]
+position = Vector2(641, 329)
+script = ExtResource("1_viqwj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0.117647, 1, 1, 1)
+offset_left = -40.0
+offset_top = 128.0
+offset_right = -6.0
+offset_bottom = 154.0
+scale = Vector2(0.945205, 0.914729)
+color = Color(1, 1, 0.0784314, 0)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+modulate = Color(0.913725, 0.027451, 0, 1)
+offset_left = 216.0
+offset_top = 192.0
+offset_right = 236.0
+offset_bottom = 206.0
+scale = Vector2(1.17821, 1.10482)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+modulate = Color(0.623759, 0.348536, 1, 1)
+offset_left = 216.0
+offset_top = 192.0
+offset_right = 236.0
+offset_bottom = 206.0
+scale = Vector2(1.17821, 1.10482)
+color = Color(0.478431, 0.258824, 0.960784, 1)
+
+[node name="TabContainer" type="TabContainer" parent="."]
+modulate = Color(0, 0.964706, 0.694118, 1)
+self_modulate = Color(0.45098, 0.917647, 1, 1)
+offset_left = 160.0
+offset_top = 120.0
+offset_right = 694.0
+offset_bottom = 539.0
+scale = Vector2(0.329303, 0.248604)
+theme_override_fonts/font = ExtResource("2_5fakd")
+theme_override_font_sizes/font_size = 28
+
+[node name="Welcome to the Gym Store" type="RichTextLabel" parent="TabContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_5fakd")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 14
+
+[node name="leftbutton" type="Button" parent="TabContainer/Welcome to the Gym Store"]
+modulate = Color(1, 1, 1, 0.0156863)
+layout_mode = 0
+offset_left = 30.3672
+offset_top = 266.729
+offset_right = 46.3672
+offset_bottom = 274.729
+scale = Vector2(1.94215, 4.41961)
+
+[node name="rightbutton" type="Button" parent="TabContainer/Welcome to the Gym Store"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 103.074
+offset_top = 270.316
+offset_right = 134.074
+offset_bottom = 278.316
+scale = Vector2(1.07242, 3.67656)
+
+[node name="righticon" type="AnimatedSprite2D" parent="."]
+position = Vector2(183, 209)
+rotation = -3.14159
+scale = Vector2(0.75, 0.829)
+sprite_frames = SubResource("SpriteFrames_2jjai")
+
+[node name="icon" type="AnimatedSprite2D" parent="."]
+position = Vector2(187, 175)
+scale = Vector2(0.45, 0.407)
+sprite_frames = SubResource("SpriteFrames_mcd0g")
+animation = &"angrybull"
+
+[node name="lefticon" type="AnimatedSprite2D" parent="."]
+position = Vector2(190, 192)
+scale = Vector2(0.75, 0.856)
+sprite_frames = SubResource("SpriteFrames_2jjai")
+
+[node name="buybutton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.992157)
+light_mask = 31
+offset_left = 216.0
+offset_top = 192.0
+offset_right = 260.0
+offset_bottom = 218.0
+scale = Vector2(0.541462, 0.604496)
+tooltip_text = "\"One item per purchase\""
+theme_override_fonts/font = ExtResource("11_dir66")
+text = "BUY"
+
+[node name="pricelabel" type="RichTextLabel" parent="."]
+offset_left = 208.0
+offset_top = 176.0
+offset_right = 246.0
+offset_bottom = 205.0
+scale = Vector2(0.474164, 0.4223)
+theme_override_fonts/normal_font = ExtResource("11_dir66")
+text = "100"
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+modulate = Color(0.105882, 0.0941176, 0.231373, 1)
+offset_left = 247.0
+offset_top = 160.0
+offset_right = 311.0
+offset_bottom = 192.0
+scale = Vector2(1.10839, 1.69854)
+
+[node name="remaining_coins_label2" type="RichTextLabel" parent="."]
+offset_left = 255.0
+offset_top = 168.0
+offset_right = 442.0
+offset_bottom = 248.0
+scale = Vector2(0.3, 0.3)
+theme_override_fonts/normal_font = ExtResource("11_dir66")
+
+[node name="coinicon" type="AnimatedSprite2D" parent="."]
+position = Vector2(231, 176)
+sprite_frames = SubResource("SpriteFrames_l60io")
+
+[node name="remaining_coins_label" type="RichTextLabel" parent="."]
+offset_left = 257.0
+offset_top = 192.0
+offset_right = 397.0
+offset_bottom = 277.0
+scale = Vector2(0.4, 0.188)
+theme_override_fonts/normal_font = ExtResource("11_dir66")
+
+[connection signal="pressed" from="TabContainer/Welcome to the Gym Store/leftbutton" to="." method="_on_leftbutton_pressed"]
+[connection signal="pressed" from="TabContainer/Welcome to the Gym Store/rightbutton" to="." method="_on_rightbutton_pressed"]
+[connection signal="pressed" from="buybutton" to="." method="_on_buybutton_pressed"]
