@@ -1,10 +1,12 @@
-[gd_scene load_steps=253 format=3 uid="uid://bq43h8fnt2grj"]
+[gd_scene load_steps=256 format=3 uid="uid://bq43h8fnt2grj"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_olbwa"]
 [ext_resource type="Texture2D" uid="uid://ea24x25vybrw" path="res://art/character/character/hulk.png" id="2_tp1vd"]
 [ext_resource type="Texture2D" uid="uid://lhb4xes550pg" path="res://art/character/character/muscular.png" id="3_vers6"]
 [ext_resource type="Texture2D" uid="uid://jyshsedxn8td" path="res://art/character/character/normal.png" id="4_kchvg"]
 [ext_resource type="Texture2D" uid="uid://cp4owbacw2p7l" path="res://art/character/character/weak.png" id="5_f0vef"]
+[ext_resource type="Script" path="res://script/stopwatch.gd" id="6_ide4q"]
+[ext_resource type="FontFile" uid="uid://ba87qwatxoltb" path="res://art/Fonts/Kenney Rocket.ttf" id="6_kf6mm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gn32h"]
 atlas = ExtResource("2_tp1vd")
@@ -1923,6 +1925,9 @@ size = Vector2(20, 27)
 [sub_resource type="CircleShape2D" id="CircleShape2D_m6e06"]
 radius = 16.0312
 
+[sub_resource type="LabelSettings" id="LabelSettings_of6c3"]
+font = ExtResource("6_kf6mm")
+
 [node name="player" type="CharacterBody2D"]
 y_sort_enabled = true
 script = ExtResource("1_olbwa")
@@ -1947,11 +1952,13 @@ limit_bottom = 953
 
 [node name="EnergyBar_HealthBar" type="ProgressBar" parent="."]
 modulate = Color(0, 1, 0.12549, 1)
-offset_left = -27.0
-offset_top = -50.0
-offset_right = 156.0
-offset_bottom = -23.0
+offset_left = 134.0
+offset_top = -134.0
+offset_right = 434.0
+offset_bottom = -107.0
 scale = Vector2(0.3, 0.643)
+theme_override_fonts/font = ExtResource("6_kf6mm")
+theme_override_font_sizes/font_size = 20
 
 [node name="player_hitbox" type="Area2D" parent="."]
 position = Vector2(0, -10)
@@ -1965,6 +1972,22 @@ wait_time = 0.842
 
 [node name="deal_attack_cooldown" type="Timer" parent="."]
 wait_time = 0.2
+
+[node name="Stopwatch" type="Label" parent="."]
+offset_left = 147.0
+offset_top = -115.0
+offset_right = 215.0
+offset_bottom = -92.0
+label_settings = SubResource("LabelSettings_of6c3")
+script = ExtResource("6_ide4q")
+
+[node name="Coins" type="Label" parent="."]
+offset_left = 10.0
+offset_top = -134.0
+offset_right = 117.0
+offset_bottom = -111.0
+theme_override_fonts/font = ExtResource("6_kf6mm")
+theme_override_font_sizes/font_size = 15
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
