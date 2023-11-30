@@ -6,7 +6,7 @@ var coin_scene = preload("res://scene/coins.tscn")
 var spawn_timer
 
 func _ready():
-	spawn_enemies(50)  # Spawn 50 enemies
+	spawn_enemies(25)  # Spawn 50 enemies
 	setup_timer()
 
 func setup_timer():
