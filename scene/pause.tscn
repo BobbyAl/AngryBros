@@ -1,37 +1,46 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvgoisa4j1f1u"]
+[gd_scene load_steps=3 format=3 uid="uid://bvgoisa4j1f1u"]
 
-[ext_resource type="Script" path="res://script/pause.gd" id="1_au36e"]
-[ext_resource type="Texture2D" uid="uid://m4aotls0w2qu" path="res://pause.png" id="2_1epnl"]
-[ext_resource type="PackedScene" uid="uid://hkikwcovs8lo" path="res://scene/world.tscn" id="2_gfu34"]
+[ext_resource type="Script" path="res://script/pause.gd" id="1_s7dox"]
+[ext_resource type="FontFile" uid="uid://ba87qwatxoltb" path="res://art/Fonts/Kenney Rocket.ttf" id="2_r5nns"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_vlysu"]
-
-[node name="StaticBody2D" type="StaticBody2D"]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(798, 230)
-sprite_frames = SubResource("SpriteFrames_vlysu")
-script = ExtResource("1_au36e")
-
-[node name="world" parent="AnimatedSprite2D" instance=ExtResource("2_gfu34")]
-
-[node name="Pause" type="Sprite2D" parent="."]
-position = Vector2(1018.75, 41.75)
-scale = Vector2(0.886667, 0.908889)
-texture = ExtResource("2_1epnl")
-
-[node name="PauseButton" type="Button" parent="Pause"]
-modulate = Color(1, 1, 1, 0)
-anchors_preset = -1
-anchor_left = -0.068
-anchor_top = 0.25
-anchor_right = 1.056
-anchor_bottom = 0.75
-offset_left = -80.7
-offset_top = -76.25
-offset_right = -144.6
-offset_bottom = -148.75
+[node name="pause" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 314.0
+offset_top = 306.0
+offset_right = 314.0
+offset_bottom = 306.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_s7dox")
 
-[connection signal="pressed" from="Pause/PauseButton" to="AnimatedSprite2D" method="_on_pause_button_pressed"]
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 2
+offset_left = 185.0
+offset_top = 4.99997
+offset_right = 255.0
+offset_bottom = 98.0
+scale = Vector2(3.56504, 2.95772)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="pause" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r5nns")
+text = " paused"
+
+[node name="Resume" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r5nns")
+text = "Resume"
+
+[node name="quit" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r5nns")
+text = "Quit"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
