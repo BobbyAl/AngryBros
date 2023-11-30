@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://kgq8dav4qjgd"]
+
+[ext_resource type="AudioStream" uid="uid://dok5ar7lq4afd" path="res://music/Audio-Bus256.wav" id="1_amyt1"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_amyt1")
+autoplay = true
