@@ -1,10 +1,10 @@
 [gd_scene load_steps=253 format=3 uid="uid://bq43h8fnt2grj"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_olbwa"]
-[ext_resource type="Texture2D" uid="uid://ea24x25vybrw" path="res://art/character/CharacterStuff/hulk.png" id="2_tp1vd"]
-[ext_resource type="Texture2D" uid="uid://lhb4xes550pg" path="res://art/character/CharacterStuff/muscular.png" id="3_vers6"]
-[ext_resource type="Texture2D" uid="uid://jyshsedxn8td" path="res://art/character/CharacterStuff/normal.png" id="4_kchvg"]
-[ext_resource type="Texture2D" uid="uid://cp4owbacw2p7l" path="res://art/character/CharacterStuff/weak.png" id="5_f0vef"]
+[ext_resource type="Texture2D" uid="uid://ea24x25vybrw" path="res://art/character/character/hulk.png" id="2_tp1vd"]
+[ext_resource type="Texture2D" uid="uid://lhb4xes550pg" path="res://art/character/character/muscular.png" id="3_vers6"]
+[ext_resource type="Texture2D" uid="uid://jyshsedxn8td" path="res://art/character/character/normal.png" id="4_kchvg"]
+[ext_resource type="Texture2D" uid="uid://cp4owbacw2p7l" path="res://art/character/character/weak.png" id="5_f0vef"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gn32h"]
 atlas = ExtResource("2_tp1vd")
