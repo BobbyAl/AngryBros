@@ -27,7 +27,16 @@ func _physics_process(delta):
 		self.queue_free()  #replace this with end screen or something
 	
 	
-	var direction = Input.get_vector("left", "right", "up", "down") #go to project -> project settings -> input map, then create the keys with correct keybind
+	var direction = Input.get_vector("left-button", "right-button", "up-button", "down-button") #go to project -> project settings -> input map, then create the keys with correct keybind
+	if Input.get_action_strength("right-button"):
+		position.x += 200 * delta
+	if Input.get_action_strength("left-button"):
+		position.x += -200 * delta
+	if Input.get_action_strength("up-button"):
+		position.y += -200 * delta
+	if Input.get_action_strength("down-button"):
+		position.y += 200 * delta
+		
 	is_attacking = Input.is_action_pressed("attack") #check if attack key is pressed
 	
 	if is_attacking:
