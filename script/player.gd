@@ -7,7 +7,7 @@ signal healthChanged
 
 
 
-var speed = 200 # can change accordingly
+var speed = 250 # can change accordingly
 var player_state
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true
