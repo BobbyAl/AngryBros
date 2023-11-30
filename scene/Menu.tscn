@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://boshl7hpdwog6"]
+[gd_scene load_steps=4 format=3 uid="uid://boshl7hpdwog6"]
 
 [ext_resource type="Texture2D" uid="uid://bmnrjr7cm3rue" path="res://art/background/AngryBrosLoadingScreen.png" id="1_de7ae"]
+[ext_resource type="FontFile" uid="uid://ba87qwatxoltb" path="res://art/Fonts/Kenney Rocket.ttf" id="2_mwi2c"]
 
 [sub_resource type="GDScript" id="GDScript_v6is8"]
 script/source = "extends Control
@@ -57,6 +58,7 @@ layout_mode = 2
 modulate = Color(100, 1, 1, 1)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_mwi2c")
 text = "Play"
 icon_alignment = 1
 expand_icon = true
@@ -65,6 +67,7 @@ expand_icon = true
 modulate = Color(100, 1, 1, 1)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_mwi2c")
 text = "Settings"
 icon_alignment = 1
 expand_icon = true
@@ -73,6 +76,7 @@ expand_icon = true
 modulate = Color(100, 1, 1, 1)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_mwi2c")
 text = "Quit"
 icon_alignment = 1
 expand_icon = true
