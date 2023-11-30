@@ -18,8 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 global="*res://script/global.gd"
-IntroMusic="*res://scene/intro_music.tscn"
 Global="*res://script/global.gd"
+MusicController="*res://autoload/MusicController.tscn"
 
 [input]
 
