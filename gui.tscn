@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://brc775m5h7wuu"]
+
+[ext_resource type="Script" path="res://gui.gd" id="1_4rk10"]
+[ext_resource type="PackedScene" uid="uid://bvgoisa4j1f1u" path="res://scene/pause.tscn" id="1_ceno8"]
+
+[node name="GUI" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_4rk10")
+
+[node name="pause" parent="." instance=ExtResource("1_ceno8")]
+visible = false
+offset_left = 27.0
+offset_top = 42.0
+offset_right = 27.0
+offset_bottom = 42.0
