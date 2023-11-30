@@ -58,6 +58,7 @@ func play_anim(dir,health): #player movement with animations # and get current h
 		state = 3
 	elif health > 71:
 		state = 4
+	
 		
 	if state == 1:
 			if player_state == "idle":
@@ -166,6 +167,8 @@ func play_anim(dir,health): #player movement with animations # and get current h
 						$AnimatedSprite2D.play("Hulk_attack_e")
 					elif dir.y == 1:
 						$AnimatedSprite2D.play("Hulk_attack_s")
+	elif health == 0:
+		get_tree().change_scene_to_file("res://scene/Died.tscn")
 			
 
 func _on_player_hitbox_body_entered(body):

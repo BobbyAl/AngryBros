@@ -31,6 +31,8 @@ func _physics_process(delta):
 		$"Detection-area/CollisionShape2D".disabled = true
 		
 
+func enemies():
+	pass
 
 func _on_detectionarea_body_entered(body):
 	if body.has_method("player"):
