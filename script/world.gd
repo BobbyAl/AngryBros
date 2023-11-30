@@ -5,7 +5,10 @@ var enemy_scene = preload("res://scene/enemies.tscn")
 var coin_scene = preload("res://scene/coins.tscn")
 var spawn_timer
 
+
 func _ready():
+	MusicController.stop_music()
+	MusicController.play_bg_music()
 	setup_timer()
 
 func setup_timer():
@@ -31,3 +34,4 @@ func spawn_coins():
 	var new_coin = coin_scene.instantiate()
 	new_coin.position = spawn_point
 	add_child(new_coin)
+	

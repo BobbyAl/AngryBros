@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvhw4a7d2yaht"]
+
+[ext_resource type="Script" path="res://script/intro.gd" id="1_nquq3"]
+[ext_resource type="Texture2D" uid="uid://d00tkksls04pq" path="res://art/background/angrybros-intro-scene.png" id="2_lq61l"]
+
+[sub_resource type="Animation" id="Animation_x6y0v"]
+resource_name = "Fade_in"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dyh4y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4vfem"]
+resource_name = "Fade_out"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w0lbr"]
+_data = {
+"Fade_in": SubResource("Animation_x6y0v"),
+"Fade_out": SubResource("Animation_4vfem"),
+"RESET": SubResource("Animation_dyh4y")
+}
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_nquq3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(579, 324)
+scale = Vector2(0.596875, 0.6)
+texture = ExtResource("2_lq61l")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -92.0
+offset_top = -124.0
+offset_right = 1265.0
+offset_bottom = 777.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_w0lbr")
+}
