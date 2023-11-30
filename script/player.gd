@@ -195,7 +195,7 @@ func enemy_attack():
 
 func attack():
 	if Input.is_action_just_pressed("attack"):
-		Global.player_current_attack = true
+		global.player_current_attack = true
 		$deal_attack_cooldown.start()
 		
 func _ready():
@@ -225,13 +225,11 @@ func update_health():
 		#healthbar.visible = true
 		
 
-
-
 func _on_timer_timeout():
 	enemy_attack_cooldown = true
 
 
 func _on_deal_attack_cooldown_timeout():
 	$deal_attack_cooldown.stop()
-	Global.player_current_attack = false
+	global.player_current_attack = false
 	is_attacking = false

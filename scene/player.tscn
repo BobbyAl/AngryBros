@@ -1,4 +1,4 @@
-[gd_scene load_steps=260 format=3 uid="uid://bq43h8fnt2grj"]
+[gd_scene load_steps=261 format=3 uid="uid://bq43h8fnt2grj"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_olbwa"]
 [ext_resource type="Texture2D" uid="uid://ea24x25vybrw" path="res://art/character/character/hulk.png" id="2_tp1vd"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bwd8xvaku4rif" path="res://art/assets/controls/rightbutton.png" id="9_dihro"]
 [ext_resource type="Texture2D" uid="uid://bwnmjoix4tyr7" path="res://art/assets/controls/upbutton.png" id="10_dip7b"]
 [ext_resource type="Texture2D" uid="uid://b3mo4e2e8w8t1" path="res://art/assets/controls/downbutton.png" id="11_fsjwj"]
+[ext_resource type="Texture2D" uid="uid://dm3f7bav2bmfg" path="res://art/assets/controls/joystick.png" id="12_kvek3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gn32h"]
 atlas = ExtResource("2_tp1vd")
@@ -1952,7 +1953,7 @@ zoom = Vector2(2.5, 2.5)
 limit_left = -1194
 limit_top = -995
 limit_right = 986
-limit_bottom = 953
+limit_bottom = 1000
 
 [node name="EnergyBar_HealthBar" type="ProgressBar" parent="."]
 modulate = Color(0, 1, 0.12549, 1)
@@ -1996,28 +1997,36 @@ theme_override_font_sizes/font_size = 15
 [node name="TouchPad" type="Node2D" parent="."]
 
 [node name="left" type="TouchScreenButton" parent="TouchPad"]
-position = Vector2(102, 66)
+position = Vector2(102, -13)
 scale = Vector2(1.85714, 1.85714)
 texture_normal = ExtResource("8_lrjmb")
 action = "left-button"
 
 [node name="right" type="TouchScreenButton" parent="TouchPad"]
-position = Vector2(163, 64)
+position = Vector2(163, -15)
 scale = Vector2(1.92857, 1.92857)
 texture_normal = ExtResource("9_dihro")
 action = "right-button"
 
 [node name="up" type="TouchScreenButton" parent="TouchPad"]
-position = Vector2(132, 38)
+position = Vector2(132, -41)
 scale = Vector2(1.93333, 1.93333)
 texture_normal = ExtResource("10_dip7b")
 action = "up-button"
 
 [node name="down" type="TouchScreenButton" parent="TouchPad"]
-position = Vector2(132, 89)
+position = Vector2(132, 9.99999)
 scale = Vector2(1.92857, 1.92857)
 texture_normal = ExtResource("11_fsjwj")
 action = "down-button"
+
+[node name="Hit" type="Node2D" parent="."]
+
+[node name="punch" type="TouchScreenButton" parent="Hit"]
+position = Vector2(-216, -26)
+scale = Vector2(2.0625, 2.0625)
+texture_normal = ExtResource("12_kvek3")
+action = "attack"
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
