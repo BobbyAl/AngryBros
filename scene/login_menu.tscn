@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bmnrjr7cm3rue" path="res://art/background/AngryBrosLoadingScreen.png" id="2_m8sp8"]
 [ext_resource type="AudioStream" uid="uid://dok5ar7lq4afd" path="res://music/Audio-Bus256.wav" id="3_8rvrb"]
 [ext_resource type="FontFile" uid="uid://ba87qwatxoltb" path="res://art/Fonts/Kenney Rocket.ttf" id="3_wc5sy"]
+=======
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_f4cvb")
@@ -24,6 +25,7 @@ theme_override_colors/background_color = Color(1, 1, 1, 0.0392157)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_wc5sy")
+
 theme_override_font_sizes/font_size = 25
 placeholder_text = "Username"
 
@@ -38,10 +40,12 @@ theme_override_colors/background_color = Color(1, 1, 1, 0.0392157)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_wc5sy")
+
 theme_override_font_sizes/font_size = 25
 placeholder_text = "Password"
 
 [node name="CreateD" type="Button" parent="."]
+
 offset_left = 376.0
 offset_top = 358.0
 offset_right = 557.0
@@ -49,6 +53,7 @@ offset_bottom = 398.0
 theme_override_colors/font_color = Color(0.972549, 0.972549, 0.972549, 1)
 theme_override_colors/font_pressed_color = Color(100, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_wc5sy")
+
 text = "Create"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
