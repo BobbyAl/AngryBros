@@ -9,11 +9,7 @@ script/source = "extends Control
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file(\"res://\")
-
-
-func _on_options_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file(\"res://scene/world.tscn\")
 
 
 func _on_quit_pressed():
@@ -32,7 +28,8 @@ grow_vertical = 2
 script = SubResource("GDScript_v6is8")
 
 [node name="AngryBrosLoadingScreen" type="Sprite2D" parent="."]
-position = Vector2(15, -49)
+position = Vector2(2.00001, 2.49998)
+scale = Vector2(1.19375, 1.19074)
 texture = ExtResource("1_de7ae")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -54,33 +51,33 @@ custom_minimum_size = Vector2(100, 50)
 layout_direction = 1
 layout_mode = 2
 
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Play" type="Button" parent="."]
 modulate = Color(100, 1, 1, 1)
 layout_mode = 2
+offset_left = -146.0
+offset_top = 18.0
+offset_right = 147.0
+offset_bottom = 79.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_mwi2c")
+theme_override_font_sizes/font_size = 25
 text = "Play"
 icon_alignment = 1
 expand_icon = true
 
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="."]
 modulate = Color(100, 1, 1, 1)
 layout_mode = 2
+offset_left = -145.0
+offset_top = 111.0
+offset_right = 146.0
+offset_bottom = 168.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_mwi2c")
-text = "Settings"
-icon_alignment = 1
-expand_icon = true
-
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
-modulate = Color(100, 1, 1, 1)
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_mwi2c")
+theme_override_font_sizes/font_size = 25
 text = "Quit"
 icon_alignment = 1
 expand_icon = true
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

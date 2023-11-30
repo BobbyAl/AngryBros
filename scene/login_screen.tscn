@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://65jr6g6nepji"]
+
+[ext_resource type="Script" path="res://login-screen.gd" id="1_oh00a"]
+[ext_resource type="Texture2D" uid="uid://bmnrjr7cm3rue" path="res://art/background/AngryBrosLoadingScreen.png" id="2_kn40j"]
+[ext_resource type="FontFile" uid="uid://ba87qwatxoltb" path="res://art/Fonts/Kenney Rocket.ttf" id="3_1rmdg"]
+
+[node name="login-screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oh00a")
+
+[node name="AngryBrosLoadingScreen" type="Sprite2D" parent="."]
+position = Vector2(576, 324.5)
+scale = Vector2(1.19792, 1.19444)
+texture = ExtResource("2_kn40j")
+
+[node name="Register" type="Button" parent="."]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 416.0
+offset_right = 707.0
+offset_bottom = 448.0
+theme_override_fonts/font = ExtResource("3_1rmdg")
+text = "Register"
+
+[node name="Login" type="Button" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 416.0
+offset_right = 566.0
+offset_bottom = 448.0
+theme_override_fonts/font = ExtResource("3_1rmdg")
+text = "Login"
+
+[node name="Email" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 292.0
+offset_right = 730.0
+offset_bottom = 344.0
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_1rmdg")
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Email"
+
+[node name="Password" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 354.0
+offset_right = 730.0
+offset_bottom = 404.0
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_1rmdg")
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Password"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Error_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 467.0
+offset_right = 729.0
+offset_bottom = 490.0
+
+[connection signal="button_down" from="Register" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="Register" to="." method="_on_register_pressed"]
+[connection signal="button_down" from="Login" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="Login" to="." method="_on_login_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

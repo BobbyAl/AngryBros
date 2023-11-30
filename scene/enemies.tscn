@@ -346,7 +346,7 @@ script = ExtResource("1_vpqjl")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l0ajt")
 animation = &"idle"
-frame_progress = 0.827886
+frame_progress = 0.632052
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
