@@ -7,12 +7,13 @@ signal healthChanged
 
 
 
-var speed = 100 # can change accordingly
+var speed = 200 # can change accordingly
 var player_state
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true
 var health = 100 # can change accordingly
 var player_alive = true
+var coins = 0
 
 var is_attacking = false 
 
@@ -190,6 +191,9 @@ func attack():
 
 func player():
 	pass
+	
+func GetCoin():
+	coins += 1
 	
 func player_shop_method():
 	pass
