@@ -4,9 +4,6 @@ class_name Player
 
 signal healthChanged
 
-
-
-
 var speed = 250 # can change accordingly
 var player_state
 var enemy_inattack_range = false
@@ -14,6 +11,7 @@ var enemy_attack_cooldown = true
 var health = 100 # can change accordingly
 var player_alive = true
 var coins = 0
+var coins_label: Label
 
 var is_attacking = false 
 
@@ -191,12 +189,19 @@ func attack():
 		Global.player_current_attack = true
 		$deal_attack_cooldown.start()
 		
+func _ready():
+	coins_label = $Coins
+		
 
 func player():
 	pass
 	
 func GetCoin():
 	coins += 1
+	update_coin_label()
+	
+func update_coin_label():
+	coins_label.text = "Coins: " + str(coins)
 	
 func player_shop_method():
 	pass
@@ -209,6 +214,8 @@ func update_health():
 	#	healthbar.visible = false
 	#else:
 		#healthbar.visible = true
+		
+
 
 
 func _on_timer_timeout():
